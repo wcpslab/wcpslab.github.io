@@ -69,9 +69,6 @@ p{margin:0 0 1rem}
 .nav-item.has-sub:hover .sub, .nav-item.has-sub:focus-within .sub{display:block}
 .sub a{display:block; padding:9px 12px; border-radius:7px; font-size:.88rem;
   font-weight:600; color:var(--fg-2); background:none; white-space:nowrap}
-.sub a:hover{color:var(--accent); background:var(--accent-soft); text-decoration:none}
-.hdr .sub a{color:var(--fg-2)}
-.hdr.solid .sub a:hover{color:var(--accent); background:var(--accent-soft)}
 
 .nav a{
   font-size:.9rem; font-weight:600; color:rgba(255,255,255,.82);
@@ -96,6 +93,16 @@ p{margin:0 0 1rem}
 .hdr.solid .nav a.active{color:var(--accent); background:var(--accent-soft)}
 .hdr.solid .btn-i{border-color:var(--line); color:var(--fg)}
 .hdr.solid .btn-i:hover{background:var(--bg-soft)}
+
+/* 드롭다운 링크 — 헤더가 투명/솔리드 어느 상태든 카드 위에서 잘 보이도록 */
+.hdr .sub a,
+.hdr.solid .sub a{
+  color:var(--fg-2); background:none;
+}
+.hdr .sub a:hover,
+.hdr.solid .sub a:hover{
+  color:var(--accent); background:var(--accent-soft); text-decoration:none;
+}
 
 /* ---- hero ---- */
 .hero{
