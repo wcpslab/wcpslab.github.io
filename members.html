@@ -17,7 +17,13 @@
     <a class="brand" href="index.html"><span class="dot"></span><span class="brand-t">WCPS Lab</span></a>
     <nav class="nav" id="nav">
       <a href="index.html">Home</a>
-      <a href="members.html" class="active">Members</a>
+      <div class="nav-item has-sub">
+        <a href="members.html" class="active">Members</a>
+        <div class="sub">
+          <a href="members.html#faculty">Faculty</a>
+          <a href="members.html#students">Students &amp; Alumni</a>
+        </div>
+      </div>
       <a href="research.html">Research</a>
       <a href="projects.html">Projects</a>
       <a href="publications.html">Publications</a>
@@ -183,24 +189,32 @@
 </footer>
 <script>
 (function(){
-  var tabs=document.querySelectorAll('.tab');
-  function show(name){
+  var tabs = document.querySelectorAll('.tab');
+  var panels = { faculty: document.getElementById('tab-faculty'),
+                 students: document.getElementById('tab-students') };
+  function show(name, scroll){
+    if(!panels[name]) name = 'faculty';
     tabs.forEach(function(t){
-      var on = t.dataset.tab===name;
+      var on = t.dataset.tab === name;
       t.classList.toggle('is-on', on);
       t.setAttribute('aria-selected', on);
     });
-    document.getElementById('tab-faculty').hidden  = (name!=='faculty');
-    document.getElementById('tab-students').hidden = (name!=='students');
+    panels.faculty.hidden  = (name !== 'faculty');
+    panels.students.hidden = (name !== 'students');
+    if(scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   tabs.forEach(function(t){
     t.addEventListener('click', function(){
-      show(t.dataset.tab);
-      history.replaceState(null,'','#'+t.dataset.tab);
-      window.scrollTo({top:0, behavior:'smooth'});
+      show(t.dataset.tab, true);
+      history.replaceState(null, '', '#' + t.dataset.tab);
     });
   });
-  if(location.hash==='#students') show('students');
+  function fromHash(){
+    var n = (location.hash || '').replace('#','');
+    if (n === 'faculty' || n === 'students') show(n, false);
+  }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);   // 같은 페이지에서 메뉴 클릭 시
 })();
 </script>
 </body>

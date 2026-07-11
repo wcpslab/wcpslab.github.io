@@ -59,7 +59,20 @@ p{margin:0 0 1rem}
 .brand:hover{text-decoration:none}
 .brand-t{font-weight:700; font-size:1.05rem; letter-spacing:-.02em}
 .dot{width:10px; height:10px; border-radius:50%; background:#fff}
-.nav{display:flex; gap:4px}
+.nav{display:flex; gap:4px; align-items:center}
+.nav-item{position:relative; display:flex; align-items:center}
+.sub{
+  display:none; position:absolute; top:100%; left:0; min-width:190px; padding:6px;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  box-shadow:var(--shadow); z-index:70;
+}
+.nav-item.has-sub:hover .sub, .nav-item.has-sub:focus-within .sub{display:block}
+.sub a{display:block; padding:9px 12px; border-radius:7px; font-size:.88rem;
+  font-weight:600; color:var(--fg-2); background:none; white-space:nowrap}
+.sub a:hover{color:var(--accent); background:var(--accent-soft); text-decoration:none}
+.hdr .sub a{color:var(--fg-2)}
+.hdr.solid .sub a:hover{color:var(--accent); background:var(--accent-soft)}
+
 .nav a{
   font-size:.9rem; font-weight:600; color:rgba(255,255,255,.82);
   padding:8px 13px; border-radius:8px; text-decoration:none;
@@ -360,6 +373,10 @@ p{margin:0 0 1rem}
   .nav.open{display:flex}
   .nav a{color:var(--fg-2); padding:12px 10px}
   .nav a:hover,.nav a.active{color:var(--accent); background:var(--accent-soft)}
+  .nav-item{display:block}
+  .sub{display:block; position:static; border:none; box-shadow:none;
+       background:none; padding:0 0 0 14px; min-width:0}
+  .sub a{font-size:.85rem; padding:9px 10px}
 }
 
 /* ---- members tabs ---- */
