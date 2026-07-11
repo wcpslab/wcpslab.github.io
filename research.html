@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — WCPS Lab</title>
+<meta name="description" content="Research areas: wearable computing, healthcare AI, embedded and cyber-physical systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/main.js"></script>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="container hdr-in">
+    <a class="brand" href="index.html"><span class="dot"></span><span class="brand-t">WCPS Lab</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="btn-i" id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    <button class="btn-i menu-t" id="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main>
+  <section class="banner">
+    <img src="assets/img/banner-research.jpg" alt="">
+    <div class="container banner-in">
+      <span class="eyebrow">Overview</span>
+      <h1>Research</h1>
+      <p>Wearable computing, healthcare artificial intelligence, and cyber-physical systems — integrated to advance intelligent and connected systems for everyday life and healthcare.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rcat">
+        <span class="eyebrow">01 — Wearable Computing</span>
+        <h2>Smart sensing &amp; activity recognition</h2>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-sleep.png" alt="Dynamic State Transition framework for wearable sleep position tracking" loading="lazy">
+          <figcaption>Dynamic State Transition framework for wearable sleep position tracking</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>Sleep Position Tracking</h3>
+          <p>Sleep is crucial for physical and mental recovery, and sleep positions significantly affect sleep quality. We propose a wearable system with two wristbands and a chest-band that tracks sleep positions, using a two-level classifier within a Dynamic State Transition framework to classify twelve motions across four sleep positions.</p>
+          <p class="ref">S. Jeon, T. Park, A. Paul, Y.-S. Lee and S. H. Son. IEEE Access, vol. 7, pp. 135742–135756, 2019. <a href="https://doi.org/10.1109/ACCESS.2019.2942608" target="_blank" rel="noopener">DOI</a></p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-stroke.png" alt="Cascade sliding window multi-stream CNN (EDIS framework)" loading="lazy">
+          <figcaption>Cascade sliding window multi-stream CNN (EDIS framework)</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>In-sleep Stroke Early Detection</h3>
+          <p>A wearable system that detects strokes during sleep by analyzing asymmetrical motion with two wristbands. The EDIS framework leverages deep learning and CNNs for efficient, accurate detection, aiming to expedite detection and reduce time to treatment.</p>
+          <p class="ref">S. Jeon, Y.-S. Lee and S. H. Son. IEEE Access, vol. 11, pp. 84944–84956, 2023. <a href="https://ieeexplore.ieee.org/document/10208220" target="_blank" rel="noopener">DOI</a></p>
+        </div>
+      </div>
+
+      <div class="rcat">
+        <span class="eyebrow">02 — Healthcare AI</span>
+        <h2>Predictive analytics &amp; patient monitoring</h2>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-driving.png" alt="Driving-PASS assessment pipeline" loading="lazy">
+          <figcaption>Driving-PASS assessment pipeline</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>Driving Performance Assessment</h3>
+          <p>Driving-PASS uses driving simulators for safer and more informative assessment of stroke survivors who wish to drive again. Built from twenty-seven participants across thirteen scenarios and expert assessments over eleven driving factors, it employs eleven classifiers with sophisticated feature extraction and data balancing.</p>
+          <p class="ref">S. Jeon, J. Son, M. Park, B. S. Ko and S. H. Son. IEEE Access, vol. 9, pp. 21627–21641, 2021. <a href="https://doi.org/10.1109/ACCESS.2021.3055870" target="_blank" rel="noopener">DOI</a></p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-sepsis.png" alt="SHAP feature importance for the balanced random forest model" loading="lazy">
+          <figcaption>SHAP feature importance for the balanced random forest model</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>Predicting Mortality in Septic Shock</h3>
+          <p>A balanced random forest model predicts 28-day mortality for stage 4 cancer patients with septic shock, achieving an AUC of 0.821 in training and 0.859 in testing across 897 patients — significantly surpassing traditional scoring systems.</p>
+          <p class="ref">B. S. Ko, S. Jeon, D. Son, et al. Journal of Clinical Medicine, 11(23), 7231, 2022. <a href="https://www.mdpi.com/2077-0383/11/23/7231" target="_blank" rel="noopener">DOI</a></p>
+        </div>
+      </div>
+
+      <div class="rcat">
+        <span class="eyebrow">03 — Embedded Systems &amp; CPS</span>
+        <h2>Timeliness, reliability, safety, security</h2>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-shock.png" alt="IoT-based architecture for automatic shock treatment" loading="lazy">
+          <figcaption>IoT-based architecture for automatic shock treatment</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>Automatic Shock Treatment</h3>
+          <p>An IoT-based framework that continuously monitors vital hemodynamic data, automatically detects shock states, and administers necessary medication, while allowing clinicians to track patient progress through a web application.</p>
+          <p class="ref">N. Lee, Y. Kim, M. Jeong, J. Shin, I. Joe, S. Jeon and B. S. Ko. KSII TIIS, vol. 16, no. 7, pp. 2209–2224, 2022. <a href="https://doi.org/10.3837/tiis.2022.07.005" target="_blank" rel="noopener">DOI</a></p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-romi.png" alt="ROMI mobile robot platform and the Simulink-based digit recognition pipeline" loading="lazy">
+          <figcaption>ROMI platform (myAGV + myCobot 280, NVIDIA Jetson, StreamCam) and the Simulink-based optical digit recognition pipeline</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>Remote Monitoring with a Mobile Robot (ROMI)</h3>
+          <p>ROMI enables non-contact monitoring of ICU patients using real-time optical digit recognition to read medical device screens. Built with MATLAB Simulink on NVIDIA Jetson hardware, it showed high accuracy across ten pre-trained CNN models.</p>
+          <p class="ref">S. Jeon, B. S. Ko and S. H. Son. Sensors, 23(2), 638, 2023. <a href="https://www.mdpi.com/1424-8220/23/2/638" target="_blank" rel="noopener">DOI</a></p>
+        </div>
+      </div>
+
+      <div class="topic no-fig">
+        <div class="topic-txt">
+          <h3>Basic Research for CPS</h3>
+          <p>Model-based and data-based approaches for the timeliness, reliability, safety, and security of cyber-physical systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="ftr">
+  <div class="container">
+    <p><strong>Wearable Cyber-Physical Systems Lab</strong></p>
+    <p>Room 528, College of Intelligent SW Convergence, The University of Suwon<br>
+       17 Wau-an-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do 18323, Republic of Korea</p>
+    <p><a href="mailto:shjeon@suwon.ac.kr">shjeon@suwon.ac.kr</a>, 031-229-8069</p>
+    <p class="c" style="margin-top:14px">© Wearable Cyber-Physical Systems Lab. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
