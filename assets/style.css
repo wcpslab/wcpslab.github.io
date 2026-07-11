@@ -239,8 +239,9 @@ p{margin:0 0 1rem}
 .cv li:last-child{border-bottom:none}
 .cv .yr{display:block; font-size:.8rem; color:var(--fg-3); font-weight:600}
 .cv .deg{display:block; font-weight:600; margin-top:2px}
-.cv .sub{display:block; color:var(--fg-2); font-size:.9rem; margin-top:4px; padding-left:14px; position:relative}
-.cv .sub::before{content:"–"; position:absolute; left:0; color:var(--fg-3)}
+.cv .subline{display:block; color:var(--fg-2); font-size:.9rem; margin-top:4px; padding-left:14px; position:relative;
+  background:none; border:none; box-shadow:none; border-radius:0; min-width:0}
+.cv .subline::before{content:"–"; position:absolute; left:0; color:var(--fg-3)}
 
 .people{display:grid; grid-template-columns:repeat(4,1fr); gap:24px}
 .person{
