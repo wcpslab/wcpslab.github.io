@@ -193,9 +193,10 @@ p{margin:0 0 1rem}
 .feat h2{font-size:1.7rem; margin:10px 0 10px}
 .feat h3{font-size:1.12rem; margin:22px 0 8px}
 .feat p{color:var(--fg-2)}
-.rcat{padding:52px 0 8px; border-top:1px solid var(--line)}
+.rcat{padding:52px 0 8px; border-top:1px solid var(--line); scroll-margin-top:90px}
 .rcat:first-child{border-top:none; padding-top:8px}
 .rcat h2{font-size:1.7rem; margin:8px 0 0}
+.rcat .rlead{color:var(--fg-2); margin:10px 0 0; max-width:70ch; font-size:.98rem}
 .topic{
   display:grid; grid-template-columns:1.05fr 1fr; gap:44px; align-items:start;
   padding:30px 0 34px;

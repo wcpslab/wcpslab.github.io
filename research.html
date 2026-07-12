@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=6">
-<script src="assets/main.js?v=6"></script>
+<link rel="stylesheet" href="assets/style.css?v=9">
+<script src="assets/main.js?v=9"></script>
 </head>
 <body>
 <header class="hdr" id="hdr">
@@ -39,15 +39,16 @@
     <div class="container banner-in">
       <span class="eyebrow">Overview</span>
       <h1>Research</h1>
-      <p>Wearable computing, healthcare artificial intelligence, and cyber-physical systems — integrated to advance intelligent and connected systems for everyday life and healthcare.</p>
+      <p>Wearable computing, real-time and embedded systems, and CPS and AI security — integrated to develop intelligent, dependable, and secure systems.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="rcat">
+      <div class="rcat" id="wearable">
         <span class="eyebrow">01 — Wearable Computing</span>
-        <h2>Smart sensing &amp; activity recognition</h2>
+        <h2>Wearable sensing &amp; human activity recognition</h2>
+        <p class="rlead">Wearable sensing and human activity recognition for healthcare, rehabilitation, and personalized monitoring.</p>
       </div>
 
       <div class="topic">
@@ -74,38 +75,10 @@
         </div>
       </div>
 
-      <div class="rcat">
-        <span class="eyebrow">02 — Healthcare AI</span>
-        <h2>Predictive analytics &amp; patient monitoring</h2>
-      </div>
-
-      <div class="topic">
-        <figure class="pfig">
-          <img src="assets/img/fig-driving.png" alt="Driving-PASS assessment pipeline" loading="lazy">
-          <figcaption>Driving-PASS assessment pipeline</figcaption>
-        </figure>
-        <div class="topic-txt">
-          <h3>Driving Performance Assessment</h3>
-          <p>Driving-PASS uses driving simulators for safer and more informative assessment of stroke survivors who wish to drive again. Built from twenty-seven participants across thirteen scenarios and expert assessments over eleven driving factors, it employs eleven classifiers with sophisticated feature extraction and data balancing.</p>
-          <p class="ref">S. Jeon, J. Son, M. Park, B. S. Ko and S. H. Son. IEEE Access, vol. 9, pp. 21627–21641, 2021. <a href="https://doi.org/10.1109/ACCESS.2021.3055870" target="_blank" rel="noopener">DOI</a></p>
-        </div>
-      </div>
-
-      <div class="topic">
-        <figure class="pfig">
-          <img src="assets/img/fig-sepsis.png" alt="SHAP feature importance for the balanced random forest model" loading="lazy">
-          <figcaption>SHAP feature importance for the balanced random forest model</figcaption>
-        </figure>
-        <div class="topic-txt">
-          <h3>Predicting Mortality in Septic Shock</h3>
-          <p>A balanced random forest model predicts 28-day mortality for stage 4 cancer patients with septic shock, achieving an AUC of 0.821 in training and 0.859 in testing across 897 patients — significantly surpassing traditional scoring systems.</p>
-          <p class="ref">B. S. Ko, S. Jeon, D. Son, et al. Journal of Clinical Medicine, 11(23), 7231, 2022. <a href="https://www.mdpi.com/2077-0383/11/23/7231" target="_blank" rel="noopener">DOI</a></p>
-        </div>
-      </div>
-
-      <div class="rcat">
-        <span class="eyebrow">03 — Embedded Systems &amp; CPS</span>
-        <h2>Timeliness, reliability, safety, security</h2>
+      <div class="rcat" id="embedded">
+        <span class="eyebrow">02 — Real-Time &amp; Embedded Systems</span>
+        <h2>Real-time processing &amp; hardware–software integration</h2>
+        <p class="rlead">Real-time processing, intelligent sensing, and hardware–software integration for reliable embedded and edge systems.</p>
       </div>
 
       <div class="topic">
@@ -132,10 +105,42 @@
         </div>
       </div>
 
-      <div class="topic no-fig">
+      <div class="rcat" id="security">
+        <span class="eyebrow">03 — CPS &amp; AI Security</span>
+        <h2>Security and trust for connected systems</h2>
+        <p class="rlead">Security and trust for critical infrastructure, embedded systems, supply chains, and AI-generated content.</p>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-nuclear.jpg" alt="Nuclear security research" loading="lazy">
+          <figcaption>Cyber-security for nuclear instrumentation and control systems</figcaption>
+        </figure>
         <div class="topic-txt">
-          <h3>Basic Research for CPS</h3>
-          <p>Model-based and data-based approaches for the timeliness, reliability, safety, and security of cyber-physical systems.</p>
+          <h3>Nuclear Security</h3>
+          <p>We study cyber-security for safety-critical nuclear systems — from graded approaches to cybersecurity visibility regulation, to security acceptance criteria for programmable logic devices such as FPGAs in new reactors. The work also covers behaviour-based cybersecurity training and simulated environments for operator readiness.</p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-xbom.jpg" alt="Software and hardware bill of materials" loading="lazy">
+          <figcaption>xBOM — software and hardware bill-of-materials for supply-chain assurance</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>xBOM — SBOM and HBOM</h3>
+          <p>Supply-chain security through bills of materials. On the software side we predict vulnerabilities from SBOM metadata using machine learning; on the hardware side we build HBOM with PUF-based device authentication and tamper detection, so that components in an IoT or embedded system can be identified and trusted end to end.</p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <figure class="pfig">
+          <img src="assets/img/fig-deepfake.jpg" alt="Deepfake detection" loading="lazy">
+          <figcaption>Robust detection of AI-generated video and voice</figcaption>
+        </figure>
+        <div class="topic-txt">
+          <h3>Deepfake Detection</h3>
+          <p>Detecting AI-generated media under real-world conditions. We compare spatial and temporal approaches for video deepfakes under platform-specific distortions, and analyse noise robustness of wav2vec2-based models for voice deepfakes — aiming for detectors that survive compression, re-encoding, and noisy channels.</p>
         </div>
       </div>
     </div>
