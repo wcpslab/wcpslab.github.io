@@ -10,6 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css?v=11">
 <script src="assets/main.js?v=11"></script>
+<style>
+.pubbar-toggle{display:none}
+@media(max-width:720px){
+  .pubbar-toggle{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    width:100%; margin:0; padding:11px 14px; cursor:pointer;
+    font-family:var(--font); font-size:.9rem; font-weight:700; color:var(--fg);
+    background:var(--bg-soft); border:1px solid var(--line); border-radius:9px;
+  }
+  .pubbar-toggle .pt-caret{transition:transform .2s ease}
+  .pubbar.collapsed .pubbar-toggle .pt-caret{transform:rotate(-90deg)}
+  .pubbar.collapsed .pubbar-body{display:none}
+  .pubbar-body{padding-top:12px}
+}
+</style>
 </head>
 <body>
 <header class="hdr" id="hdr">
@@ -42,17 +57,22 @@
       <p><span data-count="all-pubs">–</span> items across journals, conferences, patents, and software copyrights.</p>
     </div>
   </section>
-  <div class="pubbar">
+  <div class="pubbar" id="pubbar">
     <div class="container">
-      <div class="toolbar">
-        <input class="search" id="pub-search" type="search" placeholder="Search by title, author, venue, or year…" aria-label="Search publications">
-      </div>
-      <div class="jump">
-        <a href="#intl-journal">International journals</a>
-        <a href="#dom-journal">Domestic journals</a>
-        <a href="#intl-conf">International conferences</a>
-        <a href="#dom-conf">Domestic conferences</a>
-        <a href="#patents">Patents</a>
+      <button class="pubbar-toggle" id="pubbar-toggle" type="button" aria-expanded="true" aria-controls="pubbar-body">
+        <span class="pt-label">Search &amp; filters</span><span class="pt-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="pubbar-body" id="pubbar-body">
+        <div class="toolbar">
+          <input class="search" id="pub-search" type="search" placeholder="Search by title, author, venue, or year…" aria-label="Search publications">
+        </div>
+        <div class="jump">
+          <a href="#intl-journal">International journals</a>
+          <a href="#dom-journal">Domestic journals</a>
+          <a href="#intl-conf">International conferences</a>
+          <a href="#dom-conf">Domestic conferences</a>
+          <a href="#patents">Patents</a>
+        </div>
       </div>
     </div>
   </div>
@@ -172,5 +192,20 @@
     <p class="c" style="margin-top:14px">© Wearable Cyber-Physical Systems Lab. All rights reserved.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var bar=document.getElementById('pubbar');
+  var btn=document.getElementById('pubbar-toggle');
+  if(!bar||!btn) return;
+  function isMobile(){ return window.matchMedia('(max-width:720px)').matches; }
+  function collapse(v){
+    bar.classList.toggle('collapsed', v);
+    btn.setAttribute('aria-expanded', v ? 'false' : 'true');
+  }
+  collapse(isMobile());
+  btn.addEventListener('click', function(){ collapse(!bar.classList.contains('collapsed')); });
+  window.addEventListener('resize', function(){ if(!isMobile()) bar.classList.remove('collapsed'); });
+})();
+</script>
 </body>
 </html>
