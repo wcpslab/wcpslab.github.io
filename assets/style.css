@@ -55,10 +55,10 @@ p{margin:0 0 1rem}
   border-bottom:1px solid transparent;
 }
 .hdr-in{display:flex; align-items:center; gap:14px; height:70px}
-.brand{display:flex; align-items:center; gap:9px; margin-right:auto; color:#fff; text-decoration:none}
+.brand{display:flex; align-items:center; gap:10px; margin-right:auto; color:#fff; text-decoration:none}
 .brand:hover{text-decoration:none}
 .brand-t{font-weight:700; font-size:1.05rem; letter-spacing:-.02em}
-.dot{width:10px; height:10px; border-radius:50%; background:#fff}
+.dot{width:36px; height:36px; border-radius:0; background:url('img/logo-dark.png') center/contain no-repeat}
 .nav{display:flex; gap:4px; align-items:center}
 .nav-item{position:relative; display:flex; align-items:center}
 .sub{
@@ -87,7 +87,8 @@ p{margin:0 0 1rem}
 /* solid state (scrolled, or non-hero pages) */
 .hdr.solid{background:var(--bg); border-bottom-color:var(--line)}
 .hdr.solid .brand{color:var(--fg)}
-.hdr.solid .dot{background:var(--accent)}
+.hdr.solid .dot{background:url('img/logo-light.png') center/contain no-repeat}
+[data-theme="dark"] .hdr.solid .dot{background:url('img/logo-dark.png') center/contain no-repeat}
 .hdr.solid .nav a{color:var(--fg-2)}
 .hdr.solid .nav a:hover{color:var(--fg); background:var(--bg-soft)}
 .hdr.solid .nav a.active{color:var(--accent); background:var(--accent-soft)}
