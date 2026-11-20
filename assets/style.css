@@ -332,8 +332,8 @@ p{margin:0 0 1rem}
 [data-theme="dark"] .chip-scie{color:#6ee7b7; background:#0d2c20; border-color:#1d4d38}
 [data-theme="dark"] .chip-scopus{color:#93b4fd; background:#111d3a; border-color:#25396b}
 [data-theme="dark"] .chip-kci{color:#fbbf24; background:#33220c; border-color:#5c3d15}
-.chip-bk21{color:#6d28d9; background:#ede9fe; border-color:#d4c8fb}
-[data-theme="dark"] .chip-bk21{color:#c4b5fd; background:#221a3d; border-color:#3f2f6e}
+.chip-bk21{color:#be123c; background:#ffe4e9; border-color:#fbb6c4}
+[data-theme="dark"] .chip-bk21{color:#fda4b8; background:#3a1220; border-color:#6b2338}
 @media(max-width:720px){
   .pubs li.has-chip .t{padding-right:0}
   .chips{position:static; margin-top:9px; flex-wrap:wrap}
